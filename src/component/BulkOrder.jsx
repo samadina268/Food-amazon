@@ -1,9 +1,13 @@
 import BulkOrderbg from "../assets/images/bulkordercard-bg.png";
 import { useContext } from "react";
 import AllProductContext from "../Allproductcontext/AllProductContext";
+import { useNavigate } from "react-router-dom";
+
 
 const BulkOrder = () => {
   const { bulk } = useContext(AllProductContext);
+
+  const navigate = useNavigate();
 
   return (
     <div className="bulkorder-main">
@@ -20,7 +24,7 @@ const BulkOrder = () => {
 
         <div className="row g-0 mt-lg-5 pt-lg-5 justify-content-between mb-4">
           {bulk.map((order) => (
-            <div className="col-12 col-lg-3 bulkOderCard rounded-3">
+            <div className="col-12 col-lg-3 bulkOderCard rounded-3" key={order.id}>
               <div>
                 <img
                   src={order.image}
@@ -33,13 +37,17 @@ const BulkOrder = () => {
                 <div className="card-name">{order.productName}</div>
                 <div className="card-product mt-2">{order.aboutProduct}</div>
 
-                <button className="w-100 mt-5 btn btn-outline-success card-btn d-flex align-items-center justify-content-center">
-                  {order.btn}{" "}
+                <button
+                  className="w-100 mt-5 btn btn-outline-success card-btn d-flex align-items-center justify-content-center "
+                  onClick={() => navigate(`/productdetails/${order.id}`)}
+                >
+                  {order.btn}
                   <i
-                    class="ms-2 bxr  bx-arrow-right"
+                    className="ms-2 bxr  bx-arrow-right"
                     style={{ color: "#00A859", fontSize: "24px" }}
                   ></i>{" "}
                 </button>
+               
               </div>
             </div>
           ))}

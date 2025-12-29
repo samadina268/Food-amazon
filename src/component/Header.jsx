@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
 import FoodamazonLogo from "../assets/images/foodamazon-logo.png";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handlenavlist = () => {
+    navigate("/landing");
+  };
+
   return (
     <div className="position-fixed fixed-top headerbox">
       <nav className="navbar navbar-expand-lg">
@@ -35,6 +42,7 @@ const Header = () => {
                   className="nav-link active header-navlink"
                   aria-current="page"
                   href="#"
+                  onClick={handlenavlist}
                 >
                   Home
                 </a>
@@ -44,6 +52,7 @@ const Header = () => {
                   className="nav-link active header-navlink"
                   aria-current="page"
                   href="#OurProduct"
+                  onClick={handlenavlist}
                 >
                   Our Products
                 </a>
@@ -53,6 +62,7 @@ const Header = () => {
                   className="nav-link active header-navlink"
                   aria-current="page"
                   href="#healthBenefits"
+                  onClick={handlenavlist}
                 >
                   Health Benefits
                 </a>
@@ -62,18 +72,20 @@ const Header = () => {
                   className="nav-link active header-navlink"
                   aria-current="page"
                   href="#newsletter"
+                   onClick={handlenavlist}
                 >
                   Blog
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active header-navlink" href="#faqs">
+                <a className="nav-link active header-navlink" href="#faqs"  onClick={handlenavlist}
+                >
                   FAQs
                 </a>
               </li>
             </ul>
 
-            <div className="d-flex align-items-center d-none d-lg-flex">
+            <div className="d-flex align-items-center mt-4 mb-4 mb-lg-0 mt-lg-0">
               <i
                 className="bx bx-search search-icon me-4 m"
                 style={{ color: "#0F0B0B", fontSize: "30px" }}
@@ -83,8 +95,8 @@ const Header = () => {
                 style={{ color: "#0F0B0B", fontSize: "30px" }}
               ></i>
               <i
-                className="bx bx-groceries shopping-icon me-4"
-                style={{ color: "#0F0B0B", fontSize: "30px" }}
+                className="bx bx-groceries shopping-icon me-4 " onClick={() => navigate("/cart")}
+                style={{ color: "#0F0B0B", fontSize: "30px", cursor: "pointer", }}
               ></i>
             </div>
 

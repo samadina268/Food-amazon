@@ -1,8 +1,21 @@
 import { useContext } from "react";
 import AllProductContext from "../Allproductcontext/AllProductContext";
+import Swal from "sweetalert2";
 
 const OurNewProduct = () => {
   const { ourProducts } = useContext(AllProductContext);
+
+   const cartPopUP = () =>{
+    
+     Swal.fire({
+             title: "Success!",
+             text: "You have successfully Subscribed to our Newletter",
+             icon: "success",
+             confirmButtonText: "OK",
+           })
+    
+  
+    }
 
   return (
     <div className="ourProduct-mainbox mx-auto mt-5" id="OurProduct">
@@ -66,7 +79,7 @@ const OurNewProduct = () => {
               </div>
             </div>
 
-            <button className="w-100 mt-4 btn btn-outline-success">
+            <button className="w-100 mt-4 btn btn-outline-success" onClick={cartPopUP}>
               {product.btn}
             </button>
           </div>

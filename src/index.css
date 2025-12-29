@@ -241,7 +241,7 @@ link {
   }
 }
 
-/* Our Product and Our new product section */
+/* Our Product and Our new product section and Similar Products */
 .ourProduct-mainbox {
   max-width: 85%;
 }
@@ -649,4 +649,136 @@ link {
   color: #0f0b0b;
   font-size: 13px;
   font-weight: 400;
+}
+
+/* product details section */
+.productdetails-mainbox{
+  margin-top: 10rem;
+  width: 85%;
+}
+
+.product-price, .product-variety-li, .product-varienty-ul, .product-quantity-note, .product-about-note, .product-about-ul, .product-about-li, .product-about-benefits, .product-about-benefits-span {
+  font-weight: 400;
+  color: #4D4D4D;
+  font-size: 18px;
+}
+
+.product-newprice{
+  font-weight: 600;
+  color: #F86624;
+  font-size: 24px;
+}
+
+.product-variety, .product-quantity{
+    font-weight: 600;
+  color: #0F0B0B;
+  font-size: 18px;
+}
+
+.product-quantity-btn,.product-quantity-btn-display{
+  border: none;
+  background-color: #C4D1D0;
+  color: #0F0B0B;
+  width: 24px;
+  height: 24px;
+}
+
+.product-quantity-btn-display{
+  background-color: transparent !important;
+  border: 1px solid #C4D1D0 !important;
+}
+
+.checkOut-btn{
+  background-color: #F58634 !important;
+  border: none;
+}
+
+.product-about{
+   font-weight: 700;
+  color: #0F0B0B;
+  font-size: 24px;
+  font-family: "nichrome-Bold";
+}
+
+.product-about-benefits-span{
+  color: #0f0b0b !important;
+}
+
+.product-customer-h4, .product-rate-h4{
+  font-weight: 700;
+  color: #0F0B0B;
+  font-size: 20px;
+}
+
+.product-customer-h4-span, .product-rate-label{
+    font-weight: 600;
+  color: #0F0B0B;
+  font-size: 18px;
+}
+
+.product-customer-star, .product-customer-star-num, .product-rate-textarea, .product-rate-textarea-2{
+  font-weight: 400;
+  color: #4D4D4D;
+  font-size: 18px;
+}
+
+.product-rate-textarea{
+  border: 1px solid #C4D1D0;
+}
+
+.product-rate-textarea-2{
+  border: 1px solid #C4D1D0;
+  height: 180px;
+}
+
+
+
+/* review section */
+.review-mainbox{
+  width: 85%;
+}
+
+.review-cardbox{
+  width: 31%;
+  margin-top: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.14);
+  border: 1px solid #C4D1D0;
+}
+.review-inner-cardbox{
+ padding: 1rem;
+ max-width: 314px;
+}
+
+.pfp-name{
+   font-weight: 600;
+  color: #0F0B0B;
+  font-size: 18px;
+}
+
+.pfp-productname{
+   font-weight: 700;
+  color: #0F0B0B;
+  font-size: 20px;
+}
+
+.pfp-review{
+   font-weight: 600;
+  color: #4D4D4D;
+  font-size: 18px;
+  max-width: 314px;
+}
+
+@media (max-width: 768px) {
+  .review-cardbox{
+    width: 45%;
+    margin: auto;
+    margin-top: 5rem;
+  }
+}
+@media (max-width: 600px) {
+  .review-cardbox{
+    width: 85%;
+    
+    margin-top: 5rem;
+  }
 }

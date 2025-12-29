@@ -1,67 +1,27 @@
-import { useContext } from "react";
-import AllProductContext from "../Allproductcontext/AllProductContext";
-import Swal from "sweetalert2";
-import Cart1 from "../assets/images/cartitem-1.png"
-import Cart2 from "../assets/images/cartitem-2.png"
-import Cart3 from "../assets/images/cartitem-3.png"
+import AllProductContext from "../Allproductcontext/AllProductContext"
+import { useContext } from "react"
+import Swal from "sweetalert2"
 
-// const [addCart, setaddCart] = useState([{
-//   id: 1,
-//   number: "item 1",
-//   image: Cart1,
-//   productName: "Coconut Date Energy Bars",
-//   cartId: 12345678910,
-//   btn1: "Edit",
-//   btn2: "Remove"
-// },{
-//   id: 2,
-//   number: "item 2",
-//   image: Cart2,
-//   productName: "Organic Fruit Bites",
-//   cartId: 12345678911,
-//   btn1: "Edit",
-//   btn2: "Remove"
-// },{
-//   id: 3,
-//   number: "item 3",
-//   image: Cart3,
-//   productName: "Choco-Chia Delight",
-//   cartId: 12345678912,
-//   btn1: "Edit",
-//   btn2: "Remove"
-// },])
+const SimilarProduct = () => {
 
+    const { ourProducts } = useContext(AllProductContext)
 
-
-const OurProduct = () => {
-  const { ourProducts } = useContext(AllProductContext);
-
-  const cartPopUP = (def) => {
-    def.preventDefault();
-    Swal.fire({
-      // html: <div>
-      //       <div className="row">
-      //         <div className="col-12 col-md-6 col-lg-6">
-      //             <div>
-
-                    
-      //             </div>
-      //         </div>
-      //         <div className="col-12 col-md-6 col-lg-6"></div>
-      //       </div>
-      // </div>,
-      title: "Success!",
-      text: "You have successfully Subscribed to our Newletter",
-      icon: "success",
-      confirmButtonText: "OK",
-      width: "75%",
-    });
-  };
+    const cartPopUP = () =>{
+          
+           Swal.fire({
+                   title: "Success!",
+                   text: "You have successfully Subscribed to our Newletter",
+                   icon: "success",
+                   confirmButtonText: "OK",
+                 })
+          
+        
+          }
 
   return (
     <div className="ourProduct-mainbox mx-auto mt-5" id="OurProduct">
       <div className="">
-        <h1 className="ourProd-h1">Our Popular Products</h1>
+        <h1 className="ourProd-h1">Similar Products</h1>
 
         <div className="row justify-content-between">
           <div className="col-12 col-sm-5">
@@ -120,10 +80,7 @@ const OurProduct = () => {
               </div>
             </div>
 
-            <button
-              className="w-100 mt-4 btn btn-outline-success"
-              onClick={cartPopUP}
-            >
+            <button className="w-100 mt-4 btn btn-outline-success" onClick={cartPopUP}>
               {product.btn}
             </button>
           </div>
@@ -132,7 +89,7 @@ const OurProduct = () => {
 
       <hr className="mt-5 ourprod-hr" />
     </div>
-  );
-};
+  )
+}
 
-export default OurProduct;
+export default SimilarProduct
