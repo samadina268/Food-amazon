@@ -12,6 +12,8 @@ import BulkOrder1 from "../src/assets/images/bulkorder-1.png";
 import BulkOrder2 from "../src/assets/images/bulkorder-2.png";
 import BulkOrder3 from "../src/assets/images/bulkorder-3.png";
 import Cart from "./component/Cart";
+import CheckOut from "./component/CheckOut";
+import { useState } from "react";
 
 const ourProducts = [
   {
@@ -86,17 +88,22 @@ const bulk = [
   },
 ];
 
+
 function App() {
+  const [cartProduct, setcardProduct] = useState([])
+
   return (
     <div>
-      <AllProductContext.Provider value={{ ourProducts, bulk }}>
+      <AllProductContext.Provider value={{ ourProducts, bulk , cartProduct, setcardProduct, }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signIn" element={<SignIn />} />
           <Route path="/signUp" element={<SignUp />} />
           <Route path="/landing" element={<Landing />} />
           <Route path="/productdetails/:id" element={<ProductDetails />} />
+          <Route path="/cart/:id" element={<Cart />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<CheckOut />} />
 
           <Route path="*" element={<p>Page not found</p>} />
         </Routes>
