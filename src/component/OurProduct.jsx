@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import AllProductContext from "../Allproductcontext/AllProductContext";
 import { Navigate, useNavigate } from "react-router-dom";
-
+import CheckOut from "./CheckOut";
 
 
 const OurProduct = () => {
@@ -202,7 +202,7 @@ const OurProduct = () => {
                     <button className="mt-3 w-100 addToCart-btn btn btn-success" onClick={() => navigate("/cart", {state:{cartItems: cardProduct}} )}>
                       Add to Cart
                     </button>
-                    <button className="w-100 mt-2 checkOut-btn btn btn-success" >
+                    <button className="w-100 mt-2 checkOut-btn btn btn-success " onClick={() => navigate("/checkout")} >
                       Check Out
                     </button>
                   </div>

@@ -858,3 +858,78 @@ link {
 .cart-mainbox{
   width: 85%;
 }
+
+/* check out section */
+.checkOut-mainbox{
+  width: 85%;
+  margin-top: 8rem;
+}
+
+.checkOut-h2{
+  font-weight: 500;
+  color: #0F0B0B;
+  font-size: 24px;
+    font-family: "nichrome-Bold"; 
+}
+
+.checkout-input, .checkout-selectOpt, .checkOut-textarea{
+    font-weight: 400;
+  color: #566363;
+  font-size: 18px;
+  outline: none;
+  padding: 0.4rem 0.5rem ;
+  border: 1px solid #C4D1D0;
+
+}
+.checkout-input::placeholder, .checkOut-textarea::placeholder, .checkbox-label-note{
+    font-weight: 400;
+  color: #566363;
+  font-size: 18px;
+}
+
+.checkout-label{
+   font-weight: 600;
+  color: #131717;
+  font-size: 18px;
+}
+
+.checkOut-textarea{
+  height: 180px;
+}
+
+.checkOut-hr{
+  border: none;
+  height: 2px;
+  background-color: #C4D1D0;
+}
+
+.checkOut-Order-price, .checkOut-Order-saving, .checkOut-Order-shipping, .checkOut-Order-est{
+   font-weight: 400;
+  color: #566363;
+  font-size: 14px;
+}
+
+.checkOut-order-total{
+   font-weight: 700;
+  color: #131717;
+  font-size: 20px;
+}
+
+.visacardLogo-card{
+    font-weight: 400;
+  color: #566363;
+  font-size: 20px;
+  
+}
+
+.visacardLogo{
+  height: 16px;
+}
+
+.checkOut-card-remCard{
+  font-weight: 400;
+  color: #65685D;
+  font-size: 16px;
+}
+
+
