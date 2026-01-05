@@ -6,12 +6,16 @@ import HeroPageimgStar from "../assets/images/hero-page-img-star.png";
 import Herovect from "../assets/images/hero-vector.png";
 import Herovect2 from "../assets/images/hero-vector-2.png";
 import Herovect3 from "../assets/images/hero-vector-3.png";
+import HeroMainBg from "../assets/images/hero-main-bg.png"
 import { Link } from "react-router-dom";
 
 const Here = () => {
   return (
-    <div className="mt-5 position-relative">
-      <div className="row hero-main-box mx-auto g-0">
+    <div className="mt-5">
+
+      <div className=" position-relative ">
+
+        <div className="row hero-main-box mx-auto g-0 ">
         <div className="col-12 col-md-12 col-lg-5 d-flex align-items-center">
           <div>
             <p className="hero-note-1">Discover the Pure Taste of Nature</p>
@@ -53,7 +57,7 @@ const Here = () => {
             />
           </div>
 
-          <div className="row hero-icon-section mt-5 mx-auto g-0">
+          <div className="row hero-icon-section mt-5 mx-auto g-0 pb-5 pb-md-5">
             <div className="col-12 col-sm-4 col-md-4 col-lg-4">
               <div className="row g-0">
                 <div className="col-4">
@@ -106,7 +110,7 @@ const Here = () => {
                     className="w-100"
                   />
                 </div>
-                <div className="col-8 align-items-center d-flex g-0 hero-icon-heading pb-5">
+                <div className="col-8 align-items-center d-flex g-0 hero-icon-heading ">
                   <div>
                     Pick Up
                     <span className="d-block hero-icon-heading-span">
@@ -118,19 +122,56 @@ const Here = () => {
             </div>
           </div>
         </div>
+       
+     
+
       </div>
 
-      {/* <div className="">
-    <img src={Herovect} alt="hero vector img" className="w-100 position-absolute hero-bg-hover " loading="lazy" />
-  </div>
-      <div className="bg-banger">
-    <img src={Herovect2} alt="hero vector img" className="w-100   " loading="lazy" />
-  </div>
-  <div className="main-footer">
-    <div className="">
-    <img src={Herovect3} alt="hero vector img" className="w-100 hero-footer-img" loading="lazy" />
-  </div>
-  </div> */}
+          <div className="position-absolute Herovect d-none d-lg-block">
+    <img src={Herovect} alt="hero main bg" loading="lazy" className="w-100 h-100  " />
+   </div>
+
+
+      </div>
+
+       
+
+   <div className="hero-main-footer position-relative">
+    <div className="  pt-4 pb-4 " >
+     
+     <div className="mx-auto hero-footer-inner-note pt-4 pb-4">
+      <div className="row justify-content-between g-0">
+        <div className="col-6 col-md-3 d-flex justify-content-center">
+           <div className="hero-footer-num">
+            1975+ <span className="d-block hero-footer-num-span">Total Products</span>
+           </div>
+        </div>
+        <div className="col-6 col-md-3 d-flex justify-content-center">
+            <div className="hero-footer-num">
+            2880+ <span className="d-block hero-footer-num-span">Satisfied Clients</span>
+           </div>
+        </div>
+        <div className="col-6 col-md-3 d-flex justify-content-center mt-4 mt-md-0">
+          <div className="hero-footer-num">
+            3219+ <span className="d-block hero-footer-num-span">Product Sales</span>
+           </div>
+        </div>
+        <div className="col-6 col-md-3 mt-4 mt-md-0 d-flex justify-content-center">
+           <div className="hero-footer-num ">
+           100% <span className="d-block hero-footer-num-span">Guarantee</span>
+           </div>
+        </div>
+      </div>
+    </div>
+   </div>
+
+   <div className="position-absolute HeroMainBg d-none d-md-block">
+    <img src={HeroMainBg} alt="hero main bg" loading="lazy" className="w-100 h-100  " />
+   </div>
+   </div>
+
+
+
     </div>
   );
 };

@@ -90,11 +90,11 @@ const bulk = [
 
 
 function App() {
-  const [cartProduct, setcardProduct] = useState([])
+  const [cartProduct, setcartProduct] = useState([])
 
   return (
     <div>
-      <AllProductContext.Provider value={{ ourProducts, bulk , cartProduct, setcardProduct, }}>
+      <AllProductContext.Provider value={{ ourProducts, bulk , cartProduct, setcartProduct, }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signIn" element={<SignIn />} />
