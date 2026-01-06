@@ -15,6 +15,9 @@ import { useNavigate } from "react-router-dom";
 
 const ProductDetails = () => { 
   const { id } = useParams();
+   const navigate = useNavigate()
+
+  const [add, setadd] = useState(0)
 
   const { bulk, ourProducts } = useContext(AllProductContext);
 
@@ -25,10 +28,6 @@ const ProductDetails = () => {
   if (!bulkProduct || !products) {
     return <p>Product not found</p>;
   }
-
-  const navigate = useNavigate()
-
-  const [add, setadd] = useState(0)
 
   return (
     <div>
