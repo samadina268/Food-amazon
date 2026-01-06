@@ -3,7 +3,7 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+const Signup = () => {
   const [showPassword, setshowPassword] = useState(false);
 
   const [name, setname] = useState("");
@@ -141,4 +141,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Signup;

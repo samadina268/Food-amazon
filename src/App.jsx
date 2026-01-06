@@ -1,5 +1,5 @@
 import SignIn from "./component/SignIn";
-import SignUp from "./component/signup";
+import SignUp from "./component/Signup";
 import Home from "./Home";
 import Landing from "./component/Landing";
 import { Routes, Route } from "react-router-dom";
@@ -88,13 +88,14 @@ const bulk = [
   },
 ];
 
-
 function App() {
-  const [cartProduct, setcartProduct] = useState([])
+  const [cartProduct, setcartProduct] = useState([]);
 
   return (
     <div>
-      <AllProductContext.Provider value={{ ourProducts, bulk , cartProduct, setcartProduct, }}>
+      <AllProductContext.Provider
+        value={{ ourProducts, bulk, cartProduct, setcartProduct }}
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/SignIn" element={<SignIn />} />
