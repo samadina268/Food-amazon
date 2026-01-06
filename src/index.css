@@ -36,8 +36,9 @@ link {
   font-size: 16px;
 }
 
-.sign-h1-span-link {
+.sign-h1-span-btn {
   color: #f58634;
+  background-color: transparent;
 }
 
 .form-input {

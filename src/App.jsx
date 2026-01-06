@@ -1,5 +1,5 @@
 import SignIn from "./component/SignIn";
-import SignUp from "./component/SignUp";
+import SignUp from "./component/signUp";
 import Home from "./Home";
 import Landing from "./component/Landing";
 import { Routes, Route } from "react-router-dom";
@@ -97,13 +97,13 @@ function App() {
       <AllProductContext.Provider value={{ ourProducts, bulk , cartProduct, setcartProduct, }}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/signIn" element={<SignIn />} />
-          <Route path="/signUp" element={<SignUp />} />
-          <Route path="/landing" element={<Landing />} />
-          <Route path="/productdetails/:id" element={<ProductDetails />} />
-          <Route path="/cart/:id" element={<Cart />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<CheckOut />} />
+          <Route path="/SignIn" element={<SignIn />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/Landing" element={<Landing />} />
+          <Route path="/ProductDetails/:id" element={<ProductDetails />} />
+          <Route path="/Cart/:id" element={<Cart />} />
+          <Route path="/Cart" element={<Cart />} />
+          <Route path="/CheckOut" element={<CheckOut />} />
 
           <Route path="*" element={<p>Page not found</p>} />
         </Routes>

@@ -95,7 +95,7 @@ const Header = () => {
                 style={{ color: "#0F0B0B", fontSize: "30px" }}
               ></i>
               <i
-                className="bx bx-groceries shopping-icon me-4 " onClick={() => navigate("/cart")}
+                className="bx bx-groceries shopping-icon me-4 " onClick={() => navigate("/Cart")}
                 style={{ color: "#0F0B0B", fontSize: "30px", cursor: "pointer", }}
               ></i>
             </div>

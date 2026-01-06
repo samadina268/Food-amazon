@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
-import SignIn from "./SignIn";
 import SignImg from "../assets/images/sign-img.png";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
-const Signup = () => {
+const Signp = () => {
   const [showPassword, setshowPassword] = useState(false);
 
   const [name, setname] = useState("");
@@ -22,7 +20,7 @@ const Signup = () => {
         icon: "success",
         confirmButtonText: "OK",
       }).then(() => {
-        navigate("/signIn");
+        navigate("/SignIn");
       });
     }
   };
@@ -46,12 +44,8 @@ const Signup = () => {
               <h1 className="sign-h1">Sign Up</h1>
               <span className="sign-h1-span mt-4 d-block">
                 Already have an account?
-                <Link
-                  className="ms-2 sign-h1-span-link text-decoration-none "
-                  to="/signIn"
-                >
-                  Sign In
-                </Link>
+                <button className="ms-2 sign-h1-span-btn text-decoration-none border-0 " onClick={() => navigate("/SignIn")}>Sign In</button>
+                
               </span>
 
               <form action="#" method="get">
@@ -147,4 +141,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Signp;

@@ -217,7 +217,7 @@ const ThisOffer = () => {
                     <button className="mt-3 w-100 addToCart-btn btn btn-success" onClick={() => navigate("/cart")}>
                       Add to Cart
                     </button>
-                    <button className="w-100 mt-2 checkOut-btn btn btn-success " onClick={() => navigate("/checkout")}>
+                    <button className="w-100 mt-2 checkOut-btn btn btn-success " onClick={() => navigate("/Checkout")}>
                       Check Out
                     </button>
                   </div>

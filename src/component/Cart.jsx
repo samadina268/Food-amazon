@@ -28,7 +28,7 @@ const Cart = () => {
 
   const checkOut = () =>{
     if (originalPrice > 0){
-      navigate("/checkout")
+      navigate("/Checkout")
     }else{
        Swal.fire({
       icon: "info",
@@ -207,43 +207,3 @@ const Cart = () => {
 
 export default Cart;
 
-// import { useContext } from "react";
-// import Header from "./Header";
-// import AllProductContext from "../Allproductcontext/AllProductContext";
-
-// const Cart = () => {
-//   const { cartProduct, setcartProduct } =
-//     useContext(AllProductContext);
-
-//   const removeFromCart = (cartId) => {
-//     setcartProduct(cartProduct.filter((p) => p.cartId !== cartId));
-//   };
-
-//   return (
-//     <div>
-//       {/* <Header /> */}
-//       <div className="cart-mainbox mx-auto">
-//         <h2>Shopping Cart</h2>
-
-//         {cartProduct.length === 0 && <p>Your cart is empty</p>}
-
-//         {cartProduct.map((product) => (
-//           <div key={product.cartId} className="row mt-3">
-//             <div className="col-4">
-//               <img src={product.image} className="w-100" />
-//             </div>
-//             <div className="col-8">
-//               <div>{product.productName}</div>
-//               <div>${product.newPrice}</div>
-//               <button onClick={() => removeFromCart(product.cartId)}>
-//                 Remove
-//               </button>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Cart;

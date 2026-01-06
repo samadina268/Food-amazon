@@ -1,8 +1,5 @@
 import { useState } from "react";
 import SignImg from "../assets/images/sign-img.png";
-import { Link } from "react-router-dom";
-import Signup from "./signup";
-import Landing from "./Landing";
 import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
@@ -15,7 +12,7 @@ const SignIn = () => {
 
   const handleClick = () => {
     if (email && password) {
-      navigate("/landing");
+      navigate("/Landing");
     }
   };
 
@@ -38,12 +35,8 @@ const SignIn = () => {
               <h1 className="sign-h1">Sign In</h1>
               <span className="sign-h1-span mt-4 d-block">
                 Already have an account?
-                <Link
-                  className="ms-2 sign-h1-span-link text-decoration-none "
-                  to="/signUp"
-                >
-                  Sign Up
-                </Link>
+                <button className="ms-2 sign-h1-span-btn text-decoration-none border-0 " onClick={() => navigate("/SignUp")}>Sign Up</button>
+                
               </span>
 
               <form action="#" method="get">

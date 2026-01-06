@@ -193,10 +193,10 @@ const SimilarProduct = () => {
                   </div>
 
                   <div className="pe-2 ps-2 mb-5">
-                    <button className="mt-3 w-100 addToCart-btn btn btn-success" onClick={() => navigate("/cart")}>
+                    <button className="mt-3 w-100 addToCart-btn btn btn-success" onClick={() => navigate("/Cart")}>
                       Add to Cart
                     </button>
-                    <button className="w-100 mt-2 checkOut-btn btn btn-success " onClick={() => navigate("/checkout")}>
+                    <button className="w-100 mt-2 checkOut-btn btn btn-success " onClick={() => navigate("/Checkout")}>
                       Check Out
                     </button>
                   </div>

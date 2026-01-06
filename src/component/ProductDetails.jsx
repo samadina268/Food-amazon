@@ -104,8 +104,8 @@ const ProductDetails = () => {
                 </div>
 
                 <div>
-                  <button className="mt-3 w-100 addToCart-btn btn btn-success" onClick={() => navigate(`/cart/${products.id}`)}>Add to Cart</button>
-                  <button onClick={() => navigate("/checkout")} className="w-100 mt-2 checkOut-btn btn btn-success">Check Out</button>
+                  <button className="mt-3 w-100 addToCart-btn btn btn-success" onClick={() => navigate(`/Cart/${products.id}`)}>Add to Cart</button>
+                  <button onClick={() => navigate("/Checkout")} className="w-100 mt-2 checkOut-btn btn btn-success">Check Out</button>
                 </div>
               </div>
             </div>
