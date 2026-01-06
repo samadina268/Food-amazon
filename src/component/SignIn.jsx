@@ -23,7 +23,7 @@ const SignIn = () => {
           <div className="w-100">
             <img
               src={SignImg}
-              alt="Foof amazon SignImg "
+              alt="Food amazon SignImg "
               loading="lazy"
               className="w-100"
             />
