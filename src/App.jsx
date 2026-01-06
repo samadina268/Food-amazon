@@ -1,5 +1,5 @@
 import SignIn from "./component/SignIn";
-import SignUp from "./component/Signup";
+import Sign from "./component/Sign"
 import Home from "./Home";
 import Landing from "./component/Landing";
 import { Routes, Route } from "react-router-dom";
@@ -99,7 +99,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/SignIn" element={<SignIn />} />
-          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/Sign" element={<Sign />} />
           <Route path="/Landing" element={<Landing />} />
           <Route path="/ProductDetails/:id" element={<ProductDetails />} />
           <Route path="/Cart/:id" element={<Cart />} />

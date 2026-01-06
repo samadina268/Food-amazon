@@ -3,8 +3,13 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
-const Signup = () => {
-  const [showPassword, setshowPassword] = useState(false);
+
+
+
+
+const Sign = () => {
+
+      const [showPassword, setshowPassword] = useState(false);
 
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
@@ -25,8 +30,10 @@ const Signup = () => {
     }
   };
 
+
+
   return (
-    <div className="">
+     <div className="">
       <div className="row g-0 sign-main-part">
         <div className="col-12 col-md-6 col-lg-6">
           <div className="w-100">
@@ -138,7 +145,7 @@ const Signup = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Signup;
+export default Sign

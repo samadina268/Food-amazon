@@ -1,8 +1,8 @@
-import SignUp from "./component/Signup";
+import Sign from "./component/Sign";
 const Home = () => {
   return (
     <div>
-      <SignUp />
+      <Sign />
     </div>
   );
 };

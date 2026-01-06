@@ -35,7 +35,7 @@ const SignIn = () => {
               <h1 className="sign-h1">Sign In</h1>
               <span className="sign-h1-span mt-4 d-block">
                 Already have an account?
-                <button className="ms-2 sign-h1-span-btn text-decoration-none border-0 " onClick={() => navigate("/SignUp")}>Sign Up</button>
+                <button className="ms-2 sign-h1-span-btn text-decoration-none border-0 " onClick={() => navigate("/Sign")}>Sign Up</button>
                 
               </span>
 
