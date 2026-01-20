@@ -10,8 +10,6 @@ const OurProduct = () => {
   const {ourProducts, cartProduct, setcartProduct} = useContext(AllProductContext)
 
   const [isOpen, setisOpen] = useState(false);
-
-
   const navigate = useNavigate()
 
   //  Add product to cart

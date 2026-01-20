@@ -1,6 +1,8 @@
 import { useState } from "react";
 import SignImg from "../assets/images/sign-img.png";
 import { useNavigate } from "react-router-dom";
+import Joi from "joi";
+import Swal from "sweetalert2";
 
 const SignIn = () => {
   const [showPassword, setshowPassword] = useState(false);
@@ -10,17 +12,35 @@ const SignIn = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
+  const schema = Joi.object({
+    email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }).required(),
+    password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required()
+  })
+
+
   const handleClick = () => {
-    if (email && password) {
-      navigate("/Landing");
+
+    const {error} = schema.validate({
+      email,password
+    })
+    
+    if(error){
+      Swal.fire({
+            icon: "error",
+            title: "Validation error",
+            text: error.details[0].message
+          })
+          return
     }
+
+    navigate("/Landing");
   };
 
   return (
     <div className="">
       <div className="row g-0 sign-main-part">
-        <div className="col-12 col-md-6 col-lg-6">
-          <div className="w-100">
+        <div className="col-12 col-md-6 col-lg-6 ">
+          <div className="w-100 ">
             <img
               src={SignImg}
               alt="Food amazon SignImg "

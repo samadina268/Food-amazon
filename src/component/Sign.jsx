@@ -2,6 +2,9 @@ import SignImg from "../assets/images/sign-img.png";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import Joi from "joi";
+ 
+
 
 
 
@@ -9,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 
 const Sign = () => {
 
-      const [showPassword, setshowPassword] = useState(false);
+  const [showPassword, setshowPassword] = useState(false);
 
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
@@ -17,17 +20,41 @@ const Sign = () => {
   const [password, setpassword] = useState("");
   const navigate = useNavigate();
 
+  const schema = Joi.object({
+     name: Joi.string().min(4).max(12).required(),
+     email: Joi.string().email({ minDomainSegments: 2, tlds: { allow: ['com', 'net'] } }),
+     phone: Joi.string().pattern(/^[0-9]{11}$/).required(),
+    password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).required()
+  })
+
+ 
+
   const handleSubmit = () => {
-    if (name && email && phone && password) {
-      Swal.fire({
+  
+    
+   const {error} = schema.validate({
+    name, email, phone, password
+   }) 
+
+    if (error) {
+    Swal.fire({
+      icon: "error",
+      title: "Validation error",
+      text: error.details[0].message
+    })
+    return
+  }
+  Swal.fire({
         title: "Success!",
         text: "You have successfully signed Up. You will be moved to Sign In.",
         icon: "success",
         confirmButtonText: "OK",
       }).then(() => {
         navigate("/SignIn");
-      });
-    }
+      })
+
+
+   
   };
 
 
@@ -35,7 +62,7 @@ const Sign = () => {
   return (
      <div className="">
       <div className="row g-0 sign-main-part">
-        <div className="col-12 col-md-6 col-lg-6">
+        <div className="col-12 col-md-6 col-lg-6 ">
           <div className="w-100">
             <img
               src={SignImg}

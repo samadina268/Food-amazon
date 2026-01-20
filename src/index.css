@@ -847,8 +847,6 @@ link {
   background-color: #00a85a9c;
   width: 100% !important;
   top: 20%;
- 
-  
 }
 
 .cartPopup-innerbox {
@@ -920,13 +918,13 @@ link {
 /* cart section */
 
 .cart-mainbox{
-  margin-top: 6rem;
+  margin-top: 9rem;
 }
 
 /* check out section */
 .checkOut-mainbox {
   width: 85%;
-  margin-top: 8rem;
+  margin-top: 9rem;
 }
 
 .checkOut-h2 {
